@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="1366.0" style="-fx-background-color: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KhoHang.StorageController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="591.0" layoutY="22.0" prefHeight="45.0" prefWidth="250.0" text="Quản lý kho hàng" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+       <Pane layoutX="41.0" layoutY="79.0" prefHeight="50.0" prefWidth="904.0" style="-fx-background-color: #ffffff;">
+           <children>
+               <TextField fx:id="duLieuF" layoutX="7.0" prefHeight="50.0" prefWidth="565.0" promptText="Nhập dữ liệu cần tra cứu" style="-fx-background-color: 0;">
+                   <font>
+                       <Font size="15.0" />
+                   </font>
+               </TextField>
+           </children>
+       </Pane>
+      <TableView fx:id="table" layoutX="42.0" layoutY="149.0" prefHeight="430.0" prefWidth="1009.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="42.0" text="ID" />
+          <TableColumn fx:id="tenColumn" prefWidth="261.0" text="Tên" />
+            <TableColumn fx:id="modelColumn" prefWidth="96.0" text="Model" />
+            <TableColumn fx:id="serialColumn" prefWidth="94.0" text="Serial" />
+            <TableColumn fx:id="mauColumn" prefWidth="95.0" text="Màu" />
+            <TableColumn fx:id="kichThuocColumn" prefWidth="124.0" text="Kích Thước" />
+            <TableColumn fx:id="giaColumn" minWidth="0.0" prefWidth="167.0" text="Giá" />
+            <TableColumn fx:id="trangThaiColumn" prefWidth="129.0" text="Trạng Thái" />
+        </columns>
+          <contextMenu>
+              <ContextMenu>
+                  <items>
+                      <MenuItem mnemonicParsing="false" onAction="#chiTietThietBi" text="Xem thông tin thiết bị" />
+                      <MenuItem mnemonicParsing="false" onAction="#chinhSuaThietBi" text="Chỉnh sửa thông tin thiết bị" />
+                      <MenuItem mnemonicParsing="false" onAction="#xoaThietBi" text="Xóa thiết bị" />
+                  </items>
+              </ContextMenu>
+          </contextMenu>
+      </TableView>
+      <Button layoutX="1078.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#loadDataThietBi" prefHeight="45.0" prefWidth="206.0" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Tải lại bảng" textFill="WHITE" />
+      <Button fx:id="addProductButton" layoutX="1078.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#themThietBi" prefHeight="45.0" prefWidth="206.0" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Thêm thiết bị" textFill="WHITE" />
+      <Button fx:id="exportButton" layoutX="1078.0" layoutY="516.0" mnemonicParsing="false" onMouseClicked="#exportButtonOnClicked" prefHeight="45.0" prefWidth="206.0" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Xuất Hàng" textFill="WHITE" />
+         <ComboBox fx:id="truongTraCuuF" layoutX="961.0" layoutY="80.0" prefHeight="49.0" prefWidth="90.0" promptText="Lọc" style="-fx-font-size: 17; -fx-background-color: linear-gradient(to left, #ff99ff 50%, #ffccff 50%);" />
+   </children>
+</Pane>
