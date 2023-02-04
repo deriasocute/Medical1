@@ -20,70 +20,75 @@
             </font>
         </Label>
         <Pane layoutX="36.0" layoutY="74.0" prefHeight="50.0" prefWidth="457.0" style="-fx-background-color: #ffffff;">
-         <children>
+            <children>
                 <TextField fx:id="duLieuSearch" layoutX="15.0" layoutY="1.0" prefHeight="50.0" prefWidth="194.0" promptText="Nhập dữ liệu cần tra cứu" style="-fx-background-color: 0;">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </TextField>
-         </children>
+            </children>
         </Pane>
-      <TableView fx:id="table" layoutX="36.0" layoutY="142.0" onMouseClicked="#setOnMouseClicked" prefHeight="464.0" prefWidth="693.0">
-        <columns>
-          <TableColumn fx:id="idColumn" editable="false" prefWidth="75.0" text="ID KH" />
-          <TableColumn fx:id="nameColumn" editable="false" prefWidth="133.0" sortable="false" text="Tên KH" />
-            <TableColumn fx:id="phoneColumn" editable="false" prefWidth="149.0" sortable="false" text="Phone KH" />
-            <TableColumn fx:id="addressColumn" editable="false" prefWidth="336.0" sortable="false" text="Địa chỉ KH" />
-        </columns>
-      </TableView>
-      <Label layoutX="768.0" layoutY="149.0" text="Tên khách hàng:">
-         <font>
-            <Font size="20.0" />
-         </font></Label>
-      <Label layoutX="1065.0" layoutY="149.0" text="Số điện thoại:">
-         <font>
-            <Font size="20.0" />
-         </font></Label>
-      <Label layoutX="768.0" layoutY="247.0" text="Địa chỉ khách hàng:">
-         <font>
-            <Font size="20.0" />
-         </font></Label>
-      <TextField fx:id="nameLabel" layoutX="768.0" layoutY="190.0" prefHeight="44.0" prefWidth="269.0">
-         <font>
-            <Font size="20.0" />
-         </font></TextField>
-      <TextField fx:id="phoneLabel" layoutX="1065.0" layoutY="190.0">
-         <font>
-            <Font size="20.0" />
-         </font></TextField>
-      <TextField fx:id="addressLabel" layoutX="768.0" layoutY="292.0" prefHeight="44.0" prefWidth="546.0">
-         <font>
-            <Font size="20.0" />
-         </font></TextField>
-      <Button fx:id="editButton" layoutX="768.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#editButtonOnClicked" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Chỉnh sửa thông tin" textFill="WHITE">
-         <font>
-            <Font size="20.0" />
-         </font></Button>
-      <Button fx:id="addButton" layoutX="994.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#addButtonOnClicked" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Thêm khách hàng" textFill="WHITE">
-         <font>
-            <Font size="20.0" />
-         </font></Button>
-      <Button fx:id="saveButton" layoutX="1205.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#saveButtonOnClicked" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Lưu" textFill="WHITE">
-         <font>
-            <Font size="20.0" />
-         </font></Button>
-      <Label fx:id="notificationLabel" layoutX="768.0" layoutY="484.0" prefHeight="85.0" prefWidth="214.0" textFill="#b91515" wrapText="true">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="769.0" layoutY="432.0" prefHeight="27.0" prefWidth="101.0" text="Thông báo:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Button fx:id="deleteButton" layoutX="1215.0" layoutY="521.0" mnemonicParsing="false" onMouseClicked="#deleteButtonOnClicked" prefHeight="44.0" prefWidth="115.0" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Xóa" textFill="WHITE" />
-      <Button fx:id="reloadButton" layoutX="1041.0" layoutY="521.0" mnemonicParsing="false" onMouseClicked="#reloadPane" prefHeight="44.0" prefWidth="127.0" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Tải lại trang" textFill="WHITE" />
-          <ComboBox fx:id="truongSearch" layoutX="540.0" layoutY="75.0" opacity="0.72" prefHeight="49.0" prefWidth="90.0" promptText="Lọc" style="-fx-font-size: 17; -fx-background-color: linear-gradient(to left, #ff99ff 50%, #ffccff 50%);" />
+        <TableView fx:id="table" layoutX="36.0" layoutY="142.0" onMouseClicked="#setOnMouseClicked" prefHeight="464.0" prefWidth="693.0">
+            <columns>
+                <TableColumn fx:id="idColumn" editable="false" prefWidth="75.0" text="ID KH" />
+                <TableColumn fx:id="nameColumn" editable="false" prefWidth="186.0" sortable="false" text="Tên KH" />
+                <TableColumn fx:id="phoneColumn" editable="false" prefWidth="155.0" sortable="false" text="Phone KH" />
+                <TableColumn fx:id="addressColumn" editable="false" prefWidth="277.0" sortable="false" text="Địa chỉ KH" />
+            </columns>
+        </TableView>
+        <Label layoutX="768.0" layoutY="149.0" text="Tên khách hàng:">
+            <font>
+                <Font size="20.0" />
+            </font></Label>
+        <Label layoutX="1065.0" layoutY="149.0" text="Số điện thoại:">
+            <font>
+                <Font size="20.0" />
+            </font></Label>
+        <Label layoutX="768.0" layoutY="247.0" text="Địa chỉ khách hàng:">
+            <font>
+                <Font size="20.0" />
+            </font></Label>
+        <TextField fx:id="nameLabel" layoutX="768.0" layoutY="190.0" prefHeight="44.0" prefWidth="269.0">
+            <font>
+                <Font size="20.0" />
+            </font></TextField>
+        <TextField fx:id="phoneLabel" layoutX="1065.0" layoutY="190.0">
+            <font>
+                <Font size="20.0" />
+            </font></TextField>
+        <TextField fx:id="addressLabel" layoutX="768.0" layoutY="292.0" prefHeight="44.0" prefWidth="546.0">
+            <font>
+                <Font size="20.0" />
+            </font></TextField>
+        <Button fx:id="editButton" layoutX="768.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#editButtonOnClicked" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Chỉnh sửa thông tin" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font></Button>
+        <Button fx:id="addButton" layoutX="994.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#addButtonOnClicked" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Thêm khách hàng" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font></Button>
+        <Button fx:id="saveButton" layoutX="1205.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#saveButtonOnClicked" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Lưu" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font></Button>
+        <Label fx:id="notificationLabel" layoutX="768.0" layoutY="484.0" prefHeight="85.0" prefWidth="214.0" textFill="#b91515" wrapText="true">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="769.0" layoutY="432.0" prefHeight="27.0" prefWidth="101.0" text="Thông báo:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="deleteButton" layoutX="1215.0" layoutY="521.0" mnemonicParsing="false" onMouseClicked="#deleteButtonOnClicked" prefHeight="44.0" prefWidth="115.0" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Xóa" textFill="WHITE" />
+        <Button fx:id="reloadButton" layoutX="1041.0" layoutY="521.0" mnemonicParsing="false" onMouseClicked="#reloadPane" prefHeight="44.0" prefWidth="127.0" style="-fx-background-color: linear-gradient(to top, #0099cc 0%, #33cccc 100%);" text="Tải lại trang" textFill="WHITE" />
+        <ComboBox fx:id="truongSearch" layoutX="574.0" layoutY="75.0" opacity="0.72" prefHeight="49.0" prefWidth="90.0" promptText="Lọc" style="-fx-font-size: 17; -fx-background-color: linear-gradient(to left, #ff99ff 50%, #ffccff 50%);" />
+      <ImageView fx:id="searchButton" fitHeight="50.0" fitWidth="60.0" layoutX="510.0" layoutY="74.0" onMouseClicked="#searchButtonOnClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/2811806.png" />
+         </image>
+      </ImageView>
     </children>
 </Pane>
